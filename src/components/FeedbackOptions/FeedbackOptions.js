@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <OptionContainer>
-      {options.map(key => {
+      {options.map(option => {
         return (
-          <Option type="button" key={key} onClick={onLeaveFeedback}>
-            {key}
+          <Option type="button" key={option} name={option} onClick={() => onLeaveFeedback(option)}>
+            {option}
           </Option>
         );
       })}
